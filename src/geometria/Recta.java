@@ -23,9 +23,35 @@ public class Recta {
 		this.pendiente = (punto.getCoordenadaY() - puntoSecundario.getCoordenadaY()) / (punto.getCoordenadaX() - puntoSecundario.getCoordenadaX());
 	}
 
+
+
+
 	//Getters
+	public Punto getPunto() {
+		return new Punto(this.punto.getCoordenadaX(), this.punto.getCoordenadaY());
+	}
+
+	public double getPendiente() {
+		return pendiente;
+	}
 
 	//Setters
+	public void setPunto(Punto punto) {
+		this.punto = punto;
+	}
 
+	public void setPendiente(double pendiente) {
+		this.pendiente = pendiente;
+	}
+	
 	//Metodos
+	public void ecuacionGeneral() {
+		
+	}
+	public String ecuacionPuntoPendiente() {
+		 return "y = pendiente*(X - " + punto.getCoordenadaX() + ") + " + punto.getCoordenadaY();
+	}
+	public void ecuacionSimetrica() {
+		
+	}
 }
