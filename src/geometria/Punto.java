@@ -39,7 +39,11 @@ public class Punto {
 	//Metodos
 	@Override
 	public boolean equals(Object obj) {
-		return this.hashCode() == obj.hashCode();
+		if (obj instanceof Punto) {
+			Punto p = (Punto) obj;
+			return (this.coordenadaX == p.coordenadaX) && (this.coordenadaY == p.coordenadaY);
+		}
+		return super.equals(obj);
 	}
 
 	@Override
