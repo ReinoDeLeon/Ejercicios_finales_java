@@ -3,13 +3,13 @@ package geometria;
 public class Punto {
 	
 	//Atributos
-	private int coordenadaX;
-	private int coordenadaY;
+	private double coordenadaX;
+	private double coordenadaY;
 	
 	//Constructores
-	public Punto(int coordenadaX, int coordenadaY) {
-		this.coordenadaX = coordenadaX;
-		this.coordenadaY = coordenadaY;
+	public Punto(double x, double y) {
+		this.coordenadaX = x;
+		this.coordenadaY = y;
 	}
 	
 	public Punto() {
@@ -18,11 +18,11 @@ public class Punto {
 	}
 
 	//Getters
-		public int getCoordenadaX() {
+		public double getCoordenadaX() {
 		return coordenadaX;
 	}
 
-	public int getCoordenadaY() {
+	public double getCoordenadaY() {
 		return coordenadaY;
 	}
 	
