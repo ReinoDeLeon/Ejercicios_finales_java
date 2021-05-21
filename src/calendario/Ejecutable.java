@@ -1,14 +1,13 @@
 package calendario;
 
 import java.util.Calendar;
-
 import myScanner.MyScanner;
 
 public class Ejecutable {
 	public static void main(String[] args) {
 		MyScanner scan 			= new MyScanner();
 		int mes					= Calendar.getInstance().get(Calendar.MONTH)+1;
-		int anno					= Calendar.getInstance().get(Calendar.YEAR);
+		int anno				= Calendar.getInstance().get(Calendar.YEAR);
 		Calendario calendario 	= new Calendario(mes, anno);
 		String opcionUsuario  	= "";
 		

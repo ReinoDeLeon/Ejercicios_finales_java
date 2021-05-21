@@ -2,15 +2,17 @@ package calendario;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Calendario {
 	
 	Calendar calendarioPrograma;
-	private String [] meses 				= {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
-			"Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
+	private String [] meses 				= {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
 	private String [] diasDeLaSemana 		= {"Lun", "Mar", "Mie", "Jue", "Vie", "Sab", "Dom" };
 	private int[] numeroDiasDelMes			= {31,28,31,30,31,30,31,31,30,31,30,31};
+	
 	private String [][] diasDelMes 			= new String[6][7];
+	
 	private final int diaActual 			= Calendar.getInstance().get(Calendar.DATE);
 	private int anno;
 	private int numeroDeMes;
@@ -34,7 +36,7 @@ public class Calendario {
 		 */
 		SimpleDateFormat DateFor = new SimpleDateFormat("E");
 		GregorianCalendar calendarioGregoriano = new GregorianCalendar(anno, mes-1, 1);
-		java.util.Date primerDiaDelMes = new java.util.Date(calendarioGregoriano.getTime().getTime());
+		Date primerDiaDelMes = new Date(calendarioGregoriano.getTime().getTime());
 
 		/*
 		 * Hacemos una asignacion numerica con todos los posibles valores del dia de la semana
@@ -61,6 +63,7 @@ public class Calendario {
 			empezarDiasMes = 7;    	
 		}
 	}
+	
 	private void generarSemanas(int i, int j) {
 		if (diaAEscribir < empezarDiasMes) {
 			diasDelMes[i][j] = "    ";
