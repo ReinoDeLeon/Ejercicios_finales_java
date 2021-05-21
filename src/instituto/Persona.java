@@ -42,7 +42,7 @@ public abstract class Persona {
 	}
 	
 	//Metodos
-	public abstract boolean asistenciaPersona();	
+	public abstract boolean personaPuedeAsistir();	
 	
 	
 }
