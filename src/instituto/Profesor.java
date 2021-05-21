@@ -1,26 +1,26 @@
 package instituto;
 
+
 public class Profesor extends Persona {
 	//Atributos
-	private String[] asignaturasDisponibles = {"Matematicas", "Fisica", "Fisica y quimica", "Filosofia", "Lengua castellana", "Ingles", "Historia", "Tecnologias de la informacion y la comunicacion"};
+	
 	private String asignaturaImpartida;
 	
 	//Constructores
 	public Profesor(String nombre, int edad, char sexo, String asignatura) {
 		super(nombre, edad, sexo);
-		for (String s : asignaturasDisponibles) {
-			if (asignatura.equalsIgnoreCase(s)) {
-				this.asignaturaImpartida = s;
-			}
+		if (Asignatura.asignaturaDisponible(asignatura)) {
+			this.asignaturaImpartida = asignatura;
 		}
+		else {
+			throw new RuntimeException("La asignatura no es impartida en este centro");
+		}
+		
 	}
 
 	//Getters
 	public String getAsignaturaImpartida() {
 		return asignaturaImpartida;
-	}
-	public String[] getAsignaturasDisponibles() {
-		return asignaturasDisponibles;
 	}
 
 	//Setters
