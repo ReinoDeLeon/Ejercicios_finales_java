@@ -1,6 +1,5 @@
 package instituto;
 
-
 public class Profesor extends Persona {
 	//Atributos
 	
@@ -25,7 +24,12 @@ public class Profesor extends Persona {
 
 	//Setters
 	public void setAsignaturaImpartida(String asignaturaImpartida) {
-		this.asignaturaImpartida = asignaturaImpartida;
+		if (Asignatura.asignaturaDisponible(asignaturaImpartida)) {
+			this.asignaturaImpartida = asignaturaImpartida;
+		}
+		else {
+			throw new RuntimeException("La asignatura no es impartida en este centro");
+		}
 	}
 	
 	//Metodos
