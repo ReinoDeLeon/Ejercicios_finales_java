@@ -11,7 +11,12 @@ public abstract class Persona {
 		super();
 		this.nombre = nombre;
 		this.edad = edad;
-		this.sexo = sexo;
+		if (sexo == 'M') {
+			this.sexo = sexo;
+		}
+		else {
+			this.sexo = 'F';
+		}
 	}
 
 
@@ -38,7 +43,12 @@ public abstract class Persona {
 	}
 
 	public void setSexo(char sexo) {
-		this.sexo = sexo;
+		if (sexo == 'M') {
+			this.sexo = sexo;
+		}
+		else {
+			this.sexo = 'F';
+		}
 	}
 	
 	//Metodos

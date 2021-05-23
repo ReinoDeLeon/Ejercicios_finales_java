@@ -12,7 +12,12 @@
         <configuration>
           <release>14</release>
         </configuration>
+        
       </plugin>
     </plugins>
+    
   </build>
+  <dependencies>
+  	
+  </dependencies>
 </project>
